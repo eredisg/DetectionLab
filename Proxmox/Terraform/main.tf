@@ -34,6 +34,7 @@ resource "proxmox_vm_qemu" "logger" {
   network {
     model = "virtio"
     bridge = var.vm_network
+    tag = var.vlan_tag
     macaddr = "00:50:56:a3:b1:c2"
     firewall = false
   }
@@ -89,6 +90,7 @@ resource "proxmox_vm_qemu" "dc" {
   network {
     model = "virtio"
     bridge = var.vm_network
+    tag = var.vlan_tag
     macaddr = "00:50:56:a1:b1:c2"
     firewall = false
   }
@@ -130,6 +132,7 @@ resource "proxmox_vm_qemu" "wef" {
   network {
     model = "virtio"
     bridge = var.vm_network
+    tag = var.vlan_tag
     macaddr = "00:50:56:a1:b2:c2"
     firewall = false
   }
@@ -171,6 +174,7 @@ resource "proxmox_vm_qemu" "win10" {
   network {
     model = "virtio"
     bridge = var.vm_network
+    tag = var.vlan_tag
     macaddr = "00:50:56:a2:b1:c2"
     firewall = false
   }

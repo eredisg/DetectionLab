@@ -17,7 +17,8 @@
         "network_adapters": [
           {
             "model": "virtio",
-            "bridge": "{{user `proxmox_network_with_dhcp_and_internet`}}"
+            "bridge": "{{user `proxmox_network_with_dhcp_and_internet`}}",
+            "vlan_tag": "{{user `proxmox_network_with_dhcp_and_internet_vlan_tag`}}"
           }
         ],
         "disks": [

@@ -11,9 +11,13 @@ variable "vm_disk_discard" {
 }
 
 variable "vm_network" {
-  default = "vmbr0"
+  default = "vmbr1"
 }
 
 variable "hostonly_network" {
-  default = "vmbr1"
+  default = "vmbr2"
+}
+
+variable "vlan_tag" {
+  default = "6"
 }

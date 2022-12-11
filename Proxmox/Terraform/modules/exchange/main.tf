@@ -35,6 +35,7 @@ resource "proxmox_vm_qemu" "exchange" {
   network {
     model = "virtio"
     bridge = var.vm_network
+    tag = var.vlan_tag
     macaddr = "00:50:56:a1:b2:c5"
     firewall = false
   }
